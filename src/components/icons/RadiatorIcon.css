@@ -1,0 +1,24 @@
+/* RadiatorIcon.css */
+@keyframes fin-flow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+.radiator-finline {
+  animation: fin-flow 1.5s ease-in-out infinite;
+}
+
+@keyframes steam-rise {
+  0% { opacity: 0; transform: translateY(0) scale(0.9); }
+  30% { opacity: 0.9; }
+  100% { opacity: 0; transform: translateY(-14px) scale(1.15); }
+}
+.radiator-steam {
+  animation: steam-rise 2.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.radiator-loader-wrap {
+  width: clamp(64px, 8vw, 140px); /* small on mobile, scales up on laptop/desktop */
+  height: clamp(64px, 8vw, 140px);
+  margin: 0 auto;
+}
