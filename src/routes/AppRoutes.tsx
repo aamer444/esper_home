@@ -14,6 +14,7 @@ const Privacy = lazy(() =>
 const Terms = lazy(() =>
   import("../pages/Legal").then((m) => ({ default: m.Terms })),
 );
+const NotFound = lazy(() => import("../pages/NotFound"));
 
 const AppRoutes = () => {
   return (
@@ -27,6 +28,7 @@ const AppRoutes = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
   );
