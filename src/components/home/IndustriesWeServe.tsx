@@ -24,7 +24,7 @@ const industryIcons = {
 
 const IndustriesWeServe = () => {
   return (
-    <section className="py-12 sm:py-16 lg:py-20">
+    <section className="py-10 sm:py-14 lg:py-16">
       <Container>
         <ScrollReveal>
           <SectionHeader
@@ -35,7 +35,7 @@ const IndustriesWeServe = () => {
           />
         </ScrollReveal>
 
-        <div className="mt-8 grid grid-cols-2 gap-3 sm:mt-10 sm:grid-cols-3 sm:gap-4 md:grid-cols-4">
+        <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:grid-cols-3 sm:gap-4 md:grid-cols-4">
           {industries.map((industry, index) => (
             <ScrollReveal key={industry.id} delay={index * 60}>
               <div className="group flex h-full flex-col items-center rounded-xl border border-gray-100 bg-esper-gray p-3 text-center transition hover:border-esper-blue hover:bg-white hover:shadow-md lg:p-4">

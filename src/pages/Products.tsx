@@ -51,8 +51,9 @@ const Products = () => {
   return (
     <Layout>
       <SEO
-        title="Products"
+        title="Radiators & Heat Exchangers | Esper Products"
         description="Browse Esper's premium range of automotive radiators, industrial radiators, heat exchangers and cooling solutions."
+        url="/products"
       />
 
       <PageHero

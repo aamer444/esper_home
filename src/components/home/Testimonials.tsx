@@ -6,7 +6,7 @@ import { testimonials } from "../../data/testimonials";
 
 const Testimonials = () => {
   return (
-    <section className="py-14 sm:py-20">
+    <section className="py-10 sm:py-14">
       <Container>
         <ScrollReveal>
           <SectionHeader
@@ -17,7 +17,7 @@ const Testimonials = () => {
           />
         </ScrollReveal>
 
-        <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
+        <div className="mt-6 grid grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-3 md:grid-cols-4 lg:grid-cols-5">
           {testimonials.map((item, index) => (
             <ScrollReveal key={item.id} delay={index * 100}>
               <article className="flex h-full flex-col rounded-xl border border-gray-100 bg-white p-3 shadow-sm lg:p-4">
@@ -29,7 +29,7 @@ const Testimonials = () => {
                 <p className="mt-3 flex-1 text-xs leading-relaxed text-gray-600 italic lg:text-sm">
                   &ldquo;{item.quote}&rdquo;
                 </p>
-                <div className="mt-4 border-t border-gray-100 pt-4">
+                <div className="mt-3 border-t border-gray-100 pt-3">
                   <p className="text-xs font-bold text-esper-navy sm:text-sm">
                     {item.name}
                   </p>

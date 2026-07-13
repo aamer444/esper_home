@@ -16,8 +16,9 @@ const Contact = () => {
   return (
     <Layout>
       <SEO
-        title="Contact"
+        title="Contact Esper Radiators"
         description="Contact Esper Radiators & Products for product inquiries, service requests and custom manufacturing."
+        url="/contact"
       />
 
       <PageHero

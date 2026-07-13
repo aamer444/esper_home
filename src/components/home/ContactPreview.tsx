@@ -9,9 +9,9 @@ const mapSrc =
 
 const ContactPreview = () => {
   return (
-    <section className="py-10 sm:py-12 lg:py-14">
+    <section className="py-8 sm:py-10 lg:py-12">
       <Container>
-        <div className="grid items-center gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
+        <div className="grid items-start gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-8">
           <ScrollReveal>
             <div className="max-w-xl">
               <span className="inline-flex items-center gap-2.5 sm:gap-3">
@@ -21,17 +21,17 @@ const ContactPreview = () => {
                 </span>
               </span>
 
-              <h2 className="mt-3 text-xl font-black uppercase leading-tight text-esper-navy sm:mt-4 sm:text-3xl lg:text-4xl">
+              <h2 className="mt-3 text-xl font-black uppercase leading-tight text-esper-navy sm:mt-4 sm:text-2xl lg:text-3xl">
                 Get In Touch
               </h2>
 
-              <p className="mt-3 max-w-lg text-sm leading-relaxed text-gray-600 sm:mt-4 sm:text-base">
+              <p className="mt-3 max-w-lg text-sm leading-relaxed text-gray-600 sm:mt-4 sm:text-sm">
                 Reach out to our team for product inquiries,
                 <br className="hidden sm:block" />
                 service requests or custom manufacturing.
               </p>
 
-              <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4">
+              <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4">
                 <div className="flex items-start gap-2.5">
                   <MapPin className="mt-0.5 shrink-0 text-esper-red" size={16} />
                   <div>
@@ -98,7 +98,7 @@ const ContactPreview = () => {
           </ScrollReveal>
 
           <ScrollReveal>
-            <div className="h-[220px] overflow-hidden rounded-xl border border-gray-200 sm:h-[280px] lg:h-[320px]">
+            <div className="h-[200px] overflow-hidden rounded-xl border border-gray-200 sm:h-[240px] lg:h-[280px]">
               <iframe
                 src={mapSrc}
                 className="h-full w-full"

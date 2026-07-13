@@ -12,8 +12,9 @@ const Services = () => {
   return (
     <Layout>
       <SEO
-        title="Services"
-        description="Professional radiator repair, recoring, maintenance, leak testing and emergency support from Esper."
+        title="Radiator Services & Repair | Esper"
+        description="Professional radiator repair, recoring, maintenance, leak testing and emergency support for industrial and automotive cooling systems."
+        url="/services"
       />
 
       <PageHero

@@ -14,7 +14,7 @@ const Hero = () => {
   const heroFallback = getHeroFallback();
 
   return (
-    <section className="relative overflow-hidden bg-esper-navy">
+    <section className="relative overflow-hidden bg-esper-navy pt-[82px]">
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-15"
@@ -41,13 +41,11 @@ const Hero = () => {
           className="
             relative
             grid
-            min-h-[calc(100vh-82px)]
-            items-center
-            gap-10
-            pt-28
-            pb-6
+            items-start
+            gap-8
+            py-16
             lg:grid-cols-2
-            lg:gap-12
+            lg:gap-10
           "
         >
           {/* LEFT */}
@@ -71,13 +69,12 @@ const Hero = () => {
                 mt-4
                 font-black
                 uppercase
-                leading-[0.86]
+                leading-[0.92]
                 tracking-tight
                 text-white
-                text-[46px]
-                sm:text-[54px]
-                lg:text-[60px]
-                xl:text-[64px]
+                text-[38px]
+                sm:text-[44px]
+                lg:text-[52px]
               "
             >
               High
@@ -91,10 +88,10 @@ const Hero = () => {
 
             <p
               className="
-                mt-5
+                mt-4
                 max-w-[520px]
-                text-[16px]
-                leading-7
+                text-sm
+                leading-6
                 text-gray-300
               "
             >
@@ -103,7 +100,7 @@ const Hero = () => {
               equipment and nationwide fleets.
             </p>
 
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-4 flex flex-col gap-3 sm:flex-row">
               <Button
                 variant="dark"
                 to="/products"
@@ -122,7 +119,7 @@ const Hero = () => {
 
           {/* RIGHT */}
           <div className="flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[620px]">
+            <div className="relative w-full max-w-[520px]">
               <div className="overflow-hidden rounded-[24px] border border-white/10 bg-white/5 shadow-[0_24px_55px_rgba(0,0,0,.40)]">
                 <div className="aspect-[16/10]">
                   <SmartImage

@@ -8,8 +8,9 @@ const Clients = () => {
   return (
     <Layout>
       <SEO
-        title="Clients"
-        description="Esper Radiators & Products — trusted by fleet operators, OEM partners and industrial leaders across India."
+        title="Clients & Partners | Esper Radiators"
+        description="Esper Radiators & Products — trusted by fleet operators, OEM partners and industrial leaders across automotive and industrial sectors."
+        url="/clients"
       />
 
       <PageHero

@@ -19,23 +19,23 @@ const SectionHeader = ({
 
   return (
     <div className={`max-w-2xl ${alignClass}`}>
-      <span className="inline-flex items-center gap-2.5 sm:gap-3">
+      <span className="inline-flex items-center gap-2 sm:gap-3">
         <span className="h-[2px] w-6 bg-esper-red sm:w-8" />
         <span
-          className={`text-[10px] font-semibold uppercase tracking-[0.25em] sm:text-xs sm:tracking-[0.32em] ${light ? "text-gray-300" : "text-esper-blue"}`}
+          className={`text-[10px] font-semibold uppercase tracking-[0.22em] sm:text-[11px] sm:tracking-[0.28em] ${light ? "text-gray-300" : "text-esper-blue"}`}
         >
           {label}
         </span>
       </span>
 
       <h2
-        className={`mt-3 text-xl font-black uppercase leading-tight sm:mt-4 sm:text-3xl lg:text-4xl ${textColor}`}
+        className={`mt-2 text-xl font-black uppercase leading-tight sm:text-2xl lg:text-3xl ${textColor}`}
       >
         {title}
       </h2>
 
       {description && (
-        <p className={`mt-3 text-sm leading-relaxed sm:mt-4 sm:text-base ${descColor}`}>
+        <p className={`mt-2 max-w-xl text-sm leading-6 sm:text-sm ${descColor}`}>
           {description}
         </p>
       )}

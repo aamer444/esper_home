@@ -16,8 +16,9 @@ const Home = () => {
   return (
     <Layout>
       <SEO
-        title="Home"
-        description="Esper Radiators & Products — premium radiators, heat exchangers and industrial cooling solutions by Daneen Heat Exchangers."
+        title="Radiators & Heat Exchangers | Esper Radiators"
+        description="Esper Radiators & Products — premium radiators, heat exchangers and industrial cooling solutions for automotive, mining and heavy equipment industries."
+        url="/"
       />
       <Hero />
       <QuickActions />

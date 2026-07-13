@@ -6,7 +6,7 @@ import { faqItems } from "../../data/faq";
 
 const FAQ = () => {
   return (
-    <section className="bg-esper-gray py-8 sm:py-12">
+    <section className="bg-esper-gray py-6 sm:py-10">
       <Container>
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-10">
           <ScrollReveal>

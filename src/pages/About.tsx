@@ -35,8 +35,9 @@ const About = () => {
   return (
     <Layout>
       <SEO
-        title="About"
-        description="Learn about Esper Radiators & Products and Daneen Heat Exchangers — decades of cooling engineering excellence."
+        title="About Esper Radiators"
+        description="Learn about Esper Radiators & Products and Daneen Heat Exchangers — engineering excellence in radiators and cooling solutions."
+        url="/about"
       />
 
       <PageHero
