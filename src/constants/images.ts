@@ -147,7 +147,7 @@ export const images = {
         "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1400&q=85&auto=format&fit=crop",
     },
     customManufacturing: {
-      src: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1400&q=85&auto=format&fit=crop",
+      src: "src/assets/images/designing_radiator.png",
     },
   },
 
@@ -157,7 +157,7 @@ export const images = {
     industrial:
       "https://images.unsplash.com/photo-1581092162384-8987c1d64118?w=1400&q=85&auto=format&fit=crop",
     manufacturing:
-      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1400&q=85&auto=format&fit=crop",
+      "src/assets/images/designing_radiator.png",
     cnc: "https://images.unsplash.com/photo-1537462715879-402d710f91a0?w=1400&q=85&auto=format&fit=crop",
   },
 
