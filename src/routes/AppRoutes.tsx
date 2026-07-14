@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import PageLoader from "../components/common/PageLoader";
+import ScrollToTop from "../components/common/ScrollToTop";
 
 const Home = lazy(() => import("../pages/Home"));
 const Products = lazy(() => import("../pages/Products"));
@@ -20,6 +21,7 @@ const NotFound = lazy(() => import("../pages/NotFound"));
 const AppRoutes = () => {
   return (
     <Suspense fallback={<PageLoader />}>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
