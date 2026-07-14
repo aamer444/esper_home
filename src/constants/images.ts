@@ -105,7 +105,7 @@ export const images = {
       src: "src/assets/images/tractor_radiator.png",
     },
     customFabricatedRadiator: {
-      src: "src/assets/images/multi_products.png",
+      src: "src/assets/images/custom_radiator.png",
       fallback:
         "https://images.unsplash.com/photo-1590674899484-d5640e854adb?w=1400&q=85&auto=format&fit=crop",
     },

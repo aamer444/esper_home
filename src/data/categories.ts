@@ -25,14 +25,22 @@ export const productCategories = [
     image: getAssetImage(images.categories.oilCoolers),
     imageFallback: getAssetFallback(images.categories.oilCoolers),
   },
-  {
-    id: "heat-exchangers",
-    title: "Heat Exchangers",
+   {
+    id: "11",
+    title: "Custom Fabricated Radiator",
     description:
-      "Custom-engineered heat exchangers for industrial, power generation and specialized thermal management applications.",
-    image: getAssetImage(images.categories.heatExchangers),
-    imageFallback: getAssetFallback(images.categories.heatExchangers),
+      "Custom-engineered radiators and heat exchangers tailored to meet specific performance requirements and space constraints.",
+    image: getAssetImage(images.products.customFabricatedRadiator),
+    imageFallback: getAssetFallback(images.products.customFabricatedRadiator),
   },
+  // {
+  //   id: "heat-exchangers",
+  //   title: "Heat Exchangers",
+  //   description:
+  //     "Custom-engineered heat exchangers for industrial, power generation and specialized thermal management applications.",
+  //   image: getAssetImage(images.categories.heatExchangers),
+  //   imageFallback: getAssetFallback(images.categories.heatExchangers),
+  // },
   {
     id: "custom-solutions",
     title: "Custom Cooling Solutions",
