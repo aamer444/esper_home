@@ -46,7 +46,7 @@ export const images = {
         "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1400&q=85&auto=format&fit=crop",
     },
     oilCoolers: {
-      src: "https://images.unsplash.com/photo-1537462715879-402d710f91a0?w=1400&q=85&auto=format&fit=crop",
+      src: "src/assets/images/oil_coller.png",
     },
     chargeAirCoolers: {
       src: "src/assets/images/products.png",
@@ -54,7 +54,7 @@ export const images = {
         "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1400&q=85&auto=format&fit=crop",
     },
     copperBrass: {
-      src: "/images/copper-core.jpg",
+      src: "/src/assets/images/copper-core.jpg",
       fallback:
         "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1400&q=85&auto=format&fit=crop",
     },
@@ -80,7 +80,7 @@ export const images = {
         "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1400&q=85&auto=format&fit=crop",
     },
     engineOilCooler: {
-      src: "https://images.unsplash.com/photo-1537462715879-402d710f91a0?w=1400&q=85&auto=format&fit=crop",
+      src: "src/assets/images/oil_coller.png",
     },
     chargeAirCooler: {
       src: "src/assets/images/products.png",
@@ -88,7 +88,7 @@ export const images = {
         "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1400&q=85&auto=format&fit=crop",
     },
     copperBrassRadiator: {
-      src: "/images/copper-core.jpg",
+      src: "/src/assets/images/copper_radiator1.png",
       fallback:
         "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1400&q=85&auto=format&fit=crop",
     },
@@ -96,13 +96,13 @@ export const images = {
       src: "src/assets/images/aluminiume_radiator_esper.png",
     },
     generatorSetRadiator: {
-      src: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1400&q=85&auto=format&fit=crop",
+      src: "src/assets/images/generators_radiator.png",
     },
     marineEngineCooler: {
       src: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1400&q=85&auto=format&fit=crop",
     },
     agriculturalTractorRadiator: {
-      src: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1400&q=85&auto=format&fit=crop",
+      src: "src/assets/images/tractor_radiator.png",
     },
     customFabricatedRadiator: {
       src: "src/assets/images/multi_products.png",
@@ -116,29 +116,30 @@ export const images = {
 
   services: {
     radiatorRepair: {
-      src: "src/assets/images/servicing_radiator.png",
+      src: "src/assets/images/welding.jpeg",
       fallback: "/images/radiator-service.jpg",
     },
     radiatorRecoring: {
-      src: "/images/copper-core.jpg",
+      src: "/src/assets/images/parts.png",
       fallback:
         "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1400&q=85&auto=format&fit=crop",
     },
     coolingMaintenance: {
-      src: "src/assets/images/radiator_3d.png",
+       src: "src/assets/images/products.png",
+      // src: "src/assets/images/radiator_3d.png",
       fallback:
         "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1400&q=85&auto=format&fit=crop",
     },
     radiatorCleaning: {
-      src: "src/assets/images/products.png",
+      src: "src/assets/images/radiator_cleaning.jpeg",
       fallback:
         "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1400&q=85&auto=format&fit=crop",
     },
     leakTesting: {
-      src: "https://images.unsplash.com/photo-1537462715879-402d710f91a0?w=1400&q=85&auto=format&fit=crop",
+      src: "src/assets/images/testing.jpg",
     },
     industrialService: {
-      src: "https://images.unsplash.com/photo-1581092162384-8987c1d64118?w=1400&q=85&auto=format&fit=crop",
+      src: "src/assets/images/cat_radiators.jpg",
     },
     emergencySupport: {
       src: "src/assets/images/good_looking.png",

@@ -8,6 +8,7 @@ const Services = lazy(() => import("../pages/Services"));
 const About = lazy(() => import("../pages/About"));
 const Clients = lazy(() => import("../pages/Clients"));
 const Contact = lazy(() => import("../pages/Contact"));
+const EcommerceComingSoon = lazy(() => import("../pages/EcommerceComingSoon"));
 const Privacy = lazy(() =>
   import("../pages/Legal").then((m) => ({ default: m.Privacy })),
 );
@@ -26,6 +27,7 @@ const AppRoutes = () => {
         <Route path="/about" element={<About />} />
         <Route path="/clients" element={<Clients />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/ecommerce-coming-soon" element={<EcommerceComingSoon />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="*" element={<NotFound />} />

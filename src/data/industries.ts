@@ -4,7 +4,7 @@ export const industries = [
   { id: "mining", title: "Mining", icon: "Pickaxe" },
   { id: "agriculture", title: "Agriculture", icon: "Wheat" },
   { id: "power", title: "Power Generation", icon: "Zap" },
-  { id: "marine", title: "Marine", icon: "Anchor" },
+  // { id: "marine", title: "Marine", icon: "Anchor" },
   { id: "heavy", title: "Heavy Equipment", icon: "Cog" },
 ] as const;
 

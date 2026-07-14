@@ -4,8 +4,8 @@ import ScrollReveal from "../common/ScrollReveal";
 import SectionHeader from "../common/SectionHeader";
 import SmartImage from "../common/SmartImage";
 import Button from "../common/PrimaryButton";
+import { Link } from "react-router-dom";
 import { productCategories } from "../../data/categories";
-import { redirectToEcommerce } from "../../utils/ecommerce";
 
 const ProductCategories = () => {
   return (
@@ -39,14 +39,13 @@ const ProductCategories = () => {
                   <p className="mt-1 line-clamp-2 text-[10px] leading-5 text-gray-600 sm:text-[11px]">
                     {category.description}
                   </p>
-                  <button
-                    type="button"
-                    onClick={() => redirectToEcommerce(category.id)}
+                  <Link
+                    to="/ecommerce-coming-soon"
                     className="mt-2 inline-flex items-center gap-1.5 text-[9px] font-semibold uppercase tracking-[0.14em] text-esper-blue transition hover:gap-2 sm:text-[10px]"
                   >
                     Explore
                     <ArrowRight size={14} />
-                  </button>
+                  </Link>
                 </div>
               </article>
             </ScrollReveal>

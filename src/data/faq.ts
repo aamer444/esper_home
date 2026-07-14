@@ -29,7 +29,7 @@ export const faqItems: FAQItem[] = [
     id: "5",
     question: "What industries do you serve?",
     answer:
-      "We serve automotive, construction, mining, agriculture, power generation, marine, and heavy equipment industries across India with nationwide support and fast delivery.",
+      "We serve automotive, construction, mining, agriculture, power generation and heavy equipment industries across India with nationwide support and fast delivery.",
   },
   {
     id: "6",

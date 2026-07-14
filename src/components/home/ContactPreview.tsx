@@ -53,7 +53,7 @@ const ContactPreview = () => {
                       Phone
                     </h3>
                     <p className="mt-1 text-xs text-gray-600 sm:text-sm">
-                      +91 98765 43210
+                      +91 8888177775
                     </p>
                   </div>
                 </div>

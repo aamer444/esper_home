@@ -1,6 +1,6 @@
 import type { Product } from "../../types";
 import SmartImage from "../common/SmartImage";
-import { redirectToEcommerce } from "../../utils/ecommerce";
+import { Link } from "react-router-dom";
 
 interface ProductCardProps {
   product: Product;
@@ -56,13 +56,12 @@ const ProductCard = ({ product }: ProductCardProps) => {
           </ul>
         </div>
 
-        <button
-          type="button"
-          onClick={() => redirectToEcommerce(product.slug)}
+        <Link
+          to="/ecommerce-coming-soon"
           className="mt-auto pt-4 text-[11px] font-semibold uppercase tracking-[0.12em] text-esper-blue transition hover:text-esper-navy sm:text-xs"
         >
           View Details →
-        </button>
+        </Link>
       </div>
     </article>
   );

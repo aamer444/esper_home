@@ -75,18 +75,6 @@ export const services: Service[] = [
     ],
   },
   {
-    id: "emergency",
-    title: "Emergency Support",
-    image: getAssetImage(images.services.emergencySupport),
-    description:
-      "24/7 emergency radiator support to minimize downtime for critical fleet and industrial operations.",
-    benefits: [
-      "Rapid response teams",
-      "Mobile repair capabilities",
-      "Priority parts availability",
-    ],
-  },
-  {
     id: "custom",
     title: "Custom Manufacturing",
     image: getAssetImage(images.services.customManufacturing),

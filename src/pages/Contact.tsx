@@ -52,7 +52,7 @@ const Contact = () => {
                       href="tel:+919876543210"
                       className="mt-1 block text-xs text-gray-600 transition hover:text-esper-blue sm:text-sm"
                     >
-                      +91 98765 43210
+                      +91 8888177775
                     </a>
                   </div>
                 </div>
