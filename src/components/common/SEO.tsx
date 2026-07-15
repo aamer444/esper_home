@@ -111,7 +111,7 @@ const SEO = ({
         "@type": "ContactPoint",
         contactType: "customer service",
         telephone: "+91 8888177775",
-        email: "info@esperradiators.com",
+        email: "Daneenheatexchangerspvtltd@gmail.com",
         areaServed: ["IN", "Global"],
         availableLanguage: ["English"],
       },

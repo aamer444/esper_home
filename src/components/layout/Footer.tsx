@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className="bg-esper-navy text-white">
       <Container>
-        <div className="grid grid-cols-2 gap-6 py-7 sm:gap-7 sm:py-9 md:grid-cols-[1.25fr_1.2fr_0.8fr_1.15fr_1fr] md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-2 gap-6 py-7 sm:gap-7 sm:py-9 md:grid-cols-[1.1fr_1.5fr_0.8fr_1fr_0.9fr] md:gap-6 lg:gap-8">
           <div className="col-span-2 sm:col-span-1">
             <Logo />
             <p className="mt-3 max-w-sm text-xs leading-relaxed text-gray-400">
@@ -21,7 +21,7 @@ const Footer = () => {
             </p>
 
             <div className="mt-3 flex gap-2.5">
-              <a
+             <a 
                 href="#"
                 aria-label="LinkedIn"
                 className="rounded-full border border-white/20 p-1.5 transition hover:border-esper-blue hover:bg-esper-blue"
@@ -49,10 +49,24 @@ const Footer = () => {
             <h3 className="text-xs font-semibold uppercase tracking-[0.18em]">
               Contact
             </h3>
-            <ul className="mt-3 space-y-2 text-xs leading-relaxed text-gray-400">
+            <ul className="mt-3 space-y-4 text-xs leading-relaxed text-gray-400">
               <li className="flex items-start gap-2">
                 <MapPin size={14} className="mt-0.5 shrink-0 text-esper-red" />
-                <span>Daneen Heat Exchangers Pvt. Ltd., India</span>
+                <span>
+                  <span className="mb-0.5 block text-[11px] font-semibold uppercase tracking-wide text-gray-200">
+                    Office
+                  </span>
+                  Shop No. 3, Anupriya Apartment, Wadgaon, Chandrapur - 442401
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <MapPin size={14} className="mt-0.5 shrink-0 text-esper-red" />
+                <span>
+                  <span className="mb-0.5 block text-[11px] font-semibold uppercase tracking-wide text-gray-200">
+                    Factory
+                  </span>
+                  Y-32, Behind Jain Tyre, Yashwantnagar Padoli MIDC, Chandrapur
+                </span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={14} className="shrink-0 text-esper-red" />

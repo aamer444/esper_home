@@ -36,12 +36,20 @@ const ContactPreview = () => {
                   <MapPin className="mt-0.5 shrink-0 text-esper-red" size={16} />
                   <div>
                     <h3 className="text-xs font-bold uppercase text-esper-navy sm:text-sm">
-                      Address
+                    Office  Address
                     </h3>
                     <p className="mt-1 text-xs leading-relaxed text-gray-600 sm:text-sm">
-                      Daneen Heat Exchangers Private Limited
+                    Shop No. 3, Anupriya Apartment, Wadgaon,
                       <br />
-                      India
+                      Chandrapur India - 442401 
+                    </p>
+                    <h3 className="text-xs font-bold uppercase text-esper-navy sm:text-sm">
+                     Factory Address
+                    </h3>
+                    <p className="mt-1 text-xs leading-relaxed text-gray-600 sm:text-sm">
+                      Y-32, Behind Jain Tyre, Yashwantnagar Padoli MIDC, 
+                      <br />
+                     Chandrapur India
                     </p>
                   </div>
                 </div>

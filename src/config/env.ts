@@ -5,5 +5,5 @@ export const env = {
     import.meta.env.VITE_GOOGLE_MAP_URL ??
     "https://maps.google.com/maps?q=India&output=embed",
   whatsappNumber: import.meta.env.VITE_WHATSAPP_NUMBER ?? "",
-  email: import.meta.env.VITE_EMAIL ?? "info@esperradiators.com",
+  email: import.meta.env.VITE_EMAIL ?? "Daneenheatexchangerspvtltd@gmail.com",
 } as const;
