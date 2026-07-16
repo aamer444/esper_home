@@ -33,18 +33,6 @@ const Contact = () => {
             <ScrollReveal className="lg:col-span-2">
               <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-1">
                 <div className="flex items-start gap-3">
-                  <MapPin className="mt-0.5 shrink-0 text-esper-red" size={18} />
-                  <div>
-                    <h3 className="text-xs font-bold uppercase text-esper-navy sm:text-sm">Address</h3>
-                    <p className="mt-1 text-xs leading-relaxed text-gray-600 sm:text-sm">
-                      Daneen Heat Exchangers Private Limited
-                      <br />
-                      India
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
                   <Phone className="mt-0.5 shrink-0 text-esper-red" size={18} />
                   <div>
                     <h3 className="text-xs font-bold uppercase text-esper-navy sm:text-sm">Phone</h3>
@@ -100,6 +88,27 @@ const Contact = () => {
                       Mon – Sat: 9:00 AM – 6:00 PM
                       <br />
                       Sunday: Closed
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <MapPin className="mt-0.5 shrink-0 text-esper-red" size={18} />
+                  <div>
+                    <h3 className="text-xs font-bold uppercase text-esper-navy sm:text-sm">Office Address</h3>
+                    <p className="mt-1 text-xs leading-relaxed text-gray-600 sm:text-sm">
+                      Shop No. 3, Anupriya Apartment, Wadgaon,
+                      <br />
+                      Chandrapur India - 442401
+                    </p>
+                  </div>
+                  <MapPin className="mt-0.5 shrink-0 text-esper-red" size={18} />
+                  <div >
+                    <h3 className="text-xs font-bold uppercase text-esper-navy sm:text-sm">Factory Address</h3>
+                    <p className="mt-1 text-xs leading-relaxed text-gray-600 sm:text-sm">
+                      Y-32, Behind Jain Tyre, Yashwantnagar Padoli MIDC
+                      <br />
+                      Chandrapur India
                     </p>
                   </div>
                 </div>

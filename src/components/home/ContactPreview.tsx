@@ -43,16 +43,22 @@ const ContactPreview = () => {
                       <br />
                       Chandrapur India - 442401
                     </p>
-                    <div className="mt-3 ">
-                      <h3 className="text-xs mt-0.5 font-bold uppercase text-esper-navy sm:text-sm">
-                        Factory Address
-                      </h3>
-                      <p className="mt-1 text-xs leading-relaxed text-gray-600 sm:text-sm">
-                        Y-32, Behind Jain Tyre, Yashwantnagar Padoli MIDC,
-                        <br />
-                        Chandrapur India
-                      </p>
-                    </div>
+
+                  </div>
+
+                </div>
+
+                <div className="flex items-start gap-2.5">
+                  <MapPin className="mt-0.5 shrink-0 text-esper-red" size={16} />
+                  <div>
+                    <h3 className="text-xs font-bold uppercase text-esper-navy sm:text-sm">
+                      Factory Address
+                    </h3>
+                    <p className="mt-1 text-xs leading-relaxed text-gray-600 sm:text-sm">
+                      Y-32, Behind Jain Tyre, Yashwantnagar Padoli MIDC,
+                      <br />
+                      Chandrapur India
+                    </p>
 
                   </div>
 

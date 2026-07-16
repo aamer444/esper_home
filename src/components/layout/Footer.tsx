@@ -21,7 +21,7 @@ const Footer = () => {
             </p>
 
             <div className="mt-3 flex gap-2.5">
-             <a 
+              <a
                 href="#"
                 aria-label="LinkedIn"
                 className="rounded-full border border-white/20 p-1.5 transition hover:border-esper-blue hover:bg-esper-blue"
@@ -43,6 +43,29 @@ const Footer = () => {
                 <Mail size={16} />
               </a>
             </div>
+
+          <div
+            className="
+              mt-5
+              w-28 h-12
+              sm:w-32 sm:h-14
+              md:w-36 md:h-16
+              lg:w-40 lg:h-[4.5rem]
+              overflow-hidden
+            "
+          >
+            <img
+              src="/images/made_in_india.png"
+              alt="Made in India"
+              className="
+                w-full
+                h-auto
+                object-cover
+                object-top
+                select-none
+              "
+            />
+          </div>
           </div>
 
           <div>
@@ -50,24 +73,6 @@ const Footer = () => {
               Contact
             </h3>
             <ul className="mt-3 space-y-4 text-xs leading-relaxed text-gray-400">
-              <li className="flex items-start gap-2">
-                <MapPin size={14} className="mt-0.5 shrink-0 text-esper-red" />
-                <span>
-                  <span className="mb-0.5 block text-[11px] font-semibold uppercase tracking-wide text-gray-200">
-                    Office
-                  </span>
-                  Shop No. 3, Anupriya Apartment, Wadgaon, Chandrapur - 442401
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <MapPin size={14} className="mt-0.5 shrink-0 text-esper-red" />
-                <span>
-                  <span className="mb-0.5 block text-[11px] font-semibold uppercase tracking-wide text-gray-200">
-                    Factory
-                  </span>
-                  Y-32, Behind Jain Tyre, Yashwantnagar Padoli MIDC, Chandrapur
-                </span>
-              </li>
               <li className="flex items-center gap-2">
                 <Phone size={14} className="shrink-0 text-esper-red" />
                 <span>+91 8888177775</span>
@@ -81,6 +86,25 @@ const Footer = () => {
                   {env.email}
                 </a>
               </li>
+               <li className="flex items-start gap-2">
+                <MapPin size={14} className="mt-0.5 shrink-0 text-esper-red" />
+                <span>
+                  <span className="mb-0.5 block text-[11px] font-semibold uppercase tracking-wide text-gray-200">
+                    Office Address
+                  </span>
+                  Shop No. 3, Anupriya Apartment, Wadgaon, Chandrapur - 442401
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <MapPin size={14} className="mt-0.5 shrink-0 text-esper-red" />
+                <span>
+                  <span className="mb-0.5 block text-[11px] font-semibold uppercase tracking-wide text-gray-200">
+                    Factory Address
+                  </span>
+                  Y-32, Behind Jain Tyre, Yashwantnagar Padoli MIDC, Chandrapur
+                </span>
+              </li>
+             
             </ul>
           </div>
 

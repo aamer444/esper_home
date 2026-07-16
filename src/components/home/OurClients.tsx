@@ -4,25 +4,26 @@ import SectionHeader from "../common/SectionHeader";
 import { clientLogos } from "../../data/testimonials";
 
 const OurClients = () => {
-  const doubled = [...clientLogos, ...clientLogos];
+  // Showing only a few placeholder logos for now — update clientLogos
+  // in data/testimonials.ts once the confirmed client list comes in.
+  const visibleLogos = clientLogos.slice(0, 4);
+  const doubled = [...visibleLogos, ...visibleLogos];
 
   return (
-    <section id="clients" className="overflow-hidden bg-esper-gray min-h-[calc(100vh-82px)]">
-      <div className="flex min-h-[calc(100vh-82px)] flex-col justify-center gap-6 py-6 sm:gap-8 sm:py-8">
+    <section id="clients" className="overflow-hidden bg-esper-gray">
+      <div className="py-12 sm:py-16">
         <Container>
-          <div className="relative -top-16">
-            <ScrollReveal>
-              <SectionHeader
-                label="Clients"
-                title="Trusted By Industry Leaders"
-                description="Partnering with leading fleet operators, OEM manufacturers and industrial enterprises."
-                align="center"
-              />
-            </ScrollReveal>
-          </div>
+          <ScrollReveal>
+            <SectionHeader
+              label="Clients"
+              title="Trusted By Industry Leaders"
+              description="Partnering with leading fleet operators, OEM manufacturers and industrial enterprises."
+              align="center"
+            />
+          </ScrollReveal>
         </Container>
 
-        <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6">
+        <div className="relative mx-auto mt-8 w-full max-w-6xl px-4 sm:mt-10 sm:px-6">
           <div className="flex animate-marquee gap-5 sm:gap-6 lg:gap-10">
             {doubled.map((client, index) => (
               <div

@@ -10,39 +10,39 @@ export const industries = [
 
 export const whyChooseItems = [
   {
-    id: "oem",
+    id: "oem-quality",
     title: "OEM Quality",
     description:
-      "Manufactured to original equipment standards with certified materials and precision processes.",
+      "Built to original equipment standards using certified materials and precision manufacturing processes.",
   },
   {
-    id: "performance",
+    id: "high-performance",
     title: "High Performance",
     description:
-      "Engineered for maximum heat rejection and reliability under extreme operating conditions.",
+      "Engineered for maximum heat rejection and dependable performance under the harshest operating conditions.",
   },
   {
-    id: "trusted",
+    id: "trusted-manufacturing",
     title: "Trusted Manufacturing",
     description:
-      "Decades of expertise from Daneen Heat Exchangers, a name synonymous with cooling excellence.",
+      "Decades of cooling expertise from Daneen Heat Exchangers, a name synonymous with reliability.",
   },
   {
-    id: "support",
-    title: "Nationwide Support",
+    id: "quality-testing",
+    title: "Rigorous Quality Testing",
     description:
-      "Service network and delivery coverage across India for fleet and industrial customers.",
+      "Every unit undergoes strict pressure, leak and performance testing before it leaves the factory.",
   },
   {
-    id: "engineers",
+    id: "experienced-engineers",
     title: "Experienced Engineers",
     description:
-      "Skilled thermal engineers providing design, troubleshooting, and custom solutions.",
+      "Skilled thermal engineers handling design, troubleshooting and fully custom cooling solutions.",
   },
   {
-    id: "delivery",
+    id: "fast-delivery",
     title: "Fast Delivery",
     description:
-      "Efficient production and logistics ensuring minimal downtime for your operations.",
+      "Efficient production and logistics that keep downtime to a minimum for your operations.",
   },
 ];
