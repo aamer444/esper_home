@@ -1,26 +1,12 @@
 import { useForm } from "react-hook-form";
-import { toast } from "sonner";
 import type { ContactFormData } from "../../types";
-import { env } from "../../config/env";
 import Button from "../common/PrimaryButton";
 
 const ContactForm = () => {
   const {
     register,
-    handleSubmit,
-    reset,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useForm<ContactFormData>();
-
-  const onSubmit = async (data: ContactFormData) => {
-    // Future API integration: POST to `${env.apiUrl}/contact`
-    console.info("Contact form submission:", data);
-
-    await new Promise((resolve) => setTimeout(resolve, 800));
-
-    toast.success("Your inquiry has been submitted successfully. We will contact you shortly.");
-    reset();
-  };
 
   const inputClass =
     "w-full rounded-md border border-gray-200 bg-white px-3 py-2.5 text-sm text-esper-navy outline-none transition focus:border-esper-blue focus:ring-2 focus:ring-esper-blue/20";
@@ -28,7 +14,7 @@ const ContactForm = () => {
   const labelClass = "mb-1.5 block text-xs font-semibold text-esper-navy sm:text-sm";
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 sm:space-y-5" noValidate>
+    <form onSubmit={(event) => event.preventDefault()} className="space-y-4 sm:space-y-5" noValidate>
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="fullName" className={labelClass}>
@@ -217,15 +203,13 @@ const ContactForm = () => {
         )}
       </div>
 
-      <Button type="submit" showArrow={false} className="w-full py-3 text-xs sm:w-auto">
-        {isSubmitting ? "Submitting..." : "Submit Inquiry"}
+      <Button type="submit" disabled showArrow={false} className="w-full py-3 text-xs sm:w-auto">
+        Submit Inquiry
       </Button>
 
-      {env.apiUrl && (
-        <p className="text-xs text-gray-400">
-          Submissions will be sent to our API when backend integration is enabled.
-        </p>
-      )}
+      <p className="text-xs text-gray-500" role="status">
+        Online inquiry submissions are temporarily unavailable. Please call or email our team for assistance.
+      </p>
     </form>
   );
 };

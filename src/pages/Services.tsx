@@ -12,15 +12,27 @@ const Services = () => {
   return (
     <Layout>
       <SEO
-        title="Radiator Services & Repair | Esper"
-        description="Professional radiator repair, recoring, maintenance, leak testing and emergency support for industrial and automotive cooling systems."
+        title="Radiator Repair & Service in Chandrapur | Esper"
+        description="Esper provides radiator repair, radiator recoring, radiator cleaning, leak testing and industrial cooling service in Chandrapur, Maharashtra for automotive and heavy equipment systems."
+        keywords="radiator repair Chandrapur, radiator service Chandrapur, radiator repair Maharashtra, radiator recoring, radiator cleaning, radiator leak testing, industrial radiator service, truck radiator repair, car radiator repair"
         url="/services"
+        breadcrumbs={[{ name: "Home", path: "/" }, { name: "Radiator Services", path: "/services" }]}
+        structuredData={services.map((service) => ({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: `${service.title} in Chandrapur`,
+          description: service.description,
+          serviceType: service.title,
+          provider: { "@id": "https://esperradiator.com/#localbusiness" },
+          areaServed: ["Chandrapur", "Maharashtra", "India"],
+          url: "https://esperradiator.com/services",
+        }))}
       />
 
       <PageHero
         label="Services"
-        title="Radiator & Cooling Services"
-        description="Comprehensive service solutions to keep your equipment running at peak performance."
+        title="Radiator Repair, Recoring & Cooling Services"
+        description="Professional radiator repair, recoring, cleaning, leak testing and industrial cooling service for automotive, truck and heavy equipment systems."
       />
 
       <section className="py-14 sm:py-20">
@@ -34,6 +46,9 @@ const Services = () => {
                       src={service.image}
                       alt={service.title}
                       loading="lazy"
+                      decoding="async"
+                      width={1200}
+                      height={900}
                       className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                     />
                   </div>

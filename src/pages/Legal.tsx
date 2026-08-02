@@ -11,7 +11,7 @@ const LegalPage = ({
   content: string;
 }) => (
   <Layout>
-    <SEO title={title} />
+    <SEO title={title} url={title === "Privacy Policy" ? "/privacy" : "/terms"} />
     <PageHero label="Legal" title={title} />
     <section className="py-12 sm:py-16">
       <Container>

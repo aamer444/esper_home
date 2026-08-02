@@ -75,6 +75,9 @@ const AboutEsper = () => {
                   src={getAssetImage(images.home.about.factory)}
                   alt="Esper manufacturing facility"
                   loading="lazy"
+                  decoding="async"
+                  width={1200}
+                  height={900}
                   className="h-full w-full object-cover"
                 />
               </div>

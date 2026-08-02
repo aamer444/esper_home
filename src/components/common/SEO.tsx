@@ -1,4 +1,12 @@
 import { useEffect } from "react";
+import { absoluteUrl, site } from "../../config/site";
+
+type JsonLd = Record<string, unknown>;
+
+interface BreadcrumbItem {
+  name: string;
+  path: string;
+}
 
 interface SEOProps {
   title: string;
@@ -8,132 +16,149 @@ interface SEOProps {
   url?: string;
   type?: "website" | "article";
   robots?: string;
+  breadcrumbs?: BreadcrumbItem[];
+  structuredData?: JsonLd[];
 }
 
-const SITE_NAME = "Esper Radiators & Products";
-const BASE_URL = "https://esperradiators.com"; // Change after domain purchase
-const DEFAULT_IMAGE = "/images/seo-banner.jpg";
-const DEFAULT_DESCRIPTION =
-  "Esper Radiators & Products manufactures premium radiators, heat exchangers and industrial cooling solutions for automotive, mining, construction and heavy equipment industries worldwide.";
-const DEFAULT_KEYWORDS =
-  "radiator, radiators, mining radiator, cat radiator, heavy duty radiator, oil cooler, heat exchanger, oem radiator, custom radiator, radiator repair, industrial radiator, heavy equipment radiator";
+const defaultKeywords =
+  "radiator manufacturer Chandrapur, radiator manufacturer Maharashtra, radiator manufacturer India, car radiator manufacturer, truck radiator manufacturer, industrial radiator manufacturer, heat exchanger manufacturer, aluminium radiator manufacturer, copper radiator manufacturer, OEM radiator manufacturer";
+
+const setMeta = (selector: string, attribute: "name" | "property", value: string, content: string) => {
+  let element = document.head.querySelector<HTMLMetaElement>(selector);
+  if (!element) {
+    element = document.createElement("meta");
+    element.setAttribute(attribute, value);
+    document.head.appendChild(element);
+  }
+  element.content = content;
+};
+
+const setLink = (rel: string, href: string) => {
+  let element = document.head.querySelector<HTMLLinkElement>(`link[rel="${rel}"]`);
+  if (!element) {
+    element = document.createElement("link");
+    element.rel = rel;
+    document.head.appendChild(element);
+  }
+  element.href = href;
+};
+
+const baseSchemas = (): JsonLd[] => [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${site.url}/#organization`,
+    name: site.legalName,
+    alternateName: site.name,
+    url: site.url,
+    logo: absoluteUrl(site.logo),
+    brand: { "@type": "Brand", name: site.name },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: site.phone,
+      email: site.email,
+      contactType: "sales and customer service",
+      areaServed: "IN",
+      availableLanguage: ["en", "hi", "mr"],
+    },
+    address: { "@type": "PostalAddress", ...site.officeAddress },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `${site.url}/#localbusiness`,
+    name: site.name,
+    legalName: site.legalName,
+    url: site.url,
+    image: absoluteUrl(site.defaultImage),
+    logo: absoluteUrl(site.logo),
+    telephone: site.phone,
+    email: site.email,
+    priceRange: "₹₹",
+    address: { "@type": "PostalAddress", ...site.officeAddress },
+    hasMap: site.mapUrl,
+    geo: { "@type": "GeoCoordinates", latitude: 19.9834379, longitude: 79.2712146 },
+    openingHoursSpecification: [{
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "09:00",
+      closes: "18:00",
+    }],
+    parentOrganization: { "@id": `${site.url}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${site.url}/#website`,
+    url: site.url,
+    name: site.name,
+    publisher: { "@id": `${site.url}/#organization` },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${site.url}/products?query={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  },
+];
 
 const SEO = ({
   title,
-  description = DEFAULT_DESCRIPTION,
-  keywords = DEFAULT_KEYWORDS,
-  image = DEFAULT_IMAGE,
+  description = site.description,
+  keywords = defaultKeywords,
+  image = site.defaultImage,
   url = "/",
   type = "website",
-  robots = "index, follow",
+  robots = "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+  breadcrumbs,
+  structuredData = [],
 }: SEOProps) => {
   useEffect(() => {
-    document.title = `${title} | ${SITE_NAME}`;
+    const canonical = absoluteUrl(url);
+    const fullTitle = title.includes(site.name) ? title : `${title} | ${site.name}`;
+    const imageUrl = absoluteUrl(image);
 
-    const updateMeta = (
-      selector: string,
-      attribute: "name" | "property",
-      value: string,
-      content: string
-    ) => {
-      let tag = document.head.querySelector(selector);
+    document.title = fullTitle;
+    setMeta('meta[name="description"]', "name", "description", description);
+    setMeta('meta[name="keywords"]', "name", "keywords", keywords);
+    setMeta('meta[name="robots"]', "name", "robots", robots);
+    setMeta('meta[name="author"]', "name", "author", site.legalName);
+    setMeta('meta[name="theme-color"]', "name", "theme-color", "#001b44");
+    setMeta('meta[name="viewport"]', "name", "viewport", "width=device-width, initial-scale=1");
+    setMeta('meta[property="og:locale"]', "property", "og:locale", "en_IN");
+    setMeta('meta[property="og:title"]', "property", "og:title", fullTitle);
+    setMeta('meta[property="og:description"]', "property", "og:description", description);
+    setMeta('meta[property="og:image"]', "property", "og:image", imageUrl);
+    setMeta('meta[property="og:url"]', "property", "og:url", canonical);
+    setMeta('meta[property="og:type"]', "property", "og:type", type);
+    setMeta('meta[property="og:site_name"]', "property", "og:site_name", site.name);
+    setMeta('meta[name="twitter:card"]', "name", "twitter:card", "summary_large_image");
+    setMeta('meta[name="twitter:title"]', "name", "twitter:title", fullTitle);
+    setMeta('meta[name="twitter:description"]', "name", "twitter:description", description);
+    setMeta('meta[name="twitter:image"]', "name", "twitter:image", imageUrl);
+    setLink("canonical", canonical);
 
-      if (!tag) {
-        tag = document.createElement("meta");
-        tag.setAttribute(attribute, value);
-        document.head.appendChild(tag);
-      }
-
-      tag.setAttribute("content", content);
-    };
-
-    const updateLink = (rel: string, href: string) => {
-      let link = document.head.querySelector(
-        `link[rel="${rel}"]`
-      ) as HTMLLinkElement | null;
-
-      if (!link) {
-        link = document.createElement("link");
-        link.rel = rel;
-        document.head.appendChild(link);
-      }
-
-      link.href = href;
-    };
-
-    updateMeta('meta[name="description"]', "name", "description", description);
-    updateMeta('meta[name="keywords"]', "name", "keywords", keywords);
-    updateMeta('meta[name="robots"]', "name", "robots", robots);
-    updateMeta('meta[name="theme-color"]', "name", "theme-color", "#002C6B");
-
-    updateMeta('meta[property="og:locale"]', "property", "og:locale", "en_US");
-    updateMeta('meta[property="og:title"]', "property", "og:title", title);
-    updateMeta('meta[property="og:description"]', "property", "og:description", description);
-    updateMeta('meta[property="og:image"]', "property", "og:image", `${BASE_URL}${image}`);
-    updateMeta('meta[property="og:url"]', "property", "og:url", `${BASE_URL}${url}`);
-    updateMeta('meta[property="og:type"]', "property", "og:type", type);
-    updateMeta('meta[property="og:site_name"]', "property", "og:site_name", SITE_NAME);
-
-    updateMeta('meta[name="twitter:card"]', "name", "twitter:card", "summary_large_image");
-    updateMeta('meta[name="twitter:title"]', "name", "twitter:title", title);
-    updateMeta('meta[name="twitter:description"]', "name", "twitter:description", description);
-    updateMeta('meta[name="twitter:image"]', "name", "twitter:image", `${BASE_URL}${image}`);
-    updateMeta('meta[name="twitter:site"]', "name", "twitter:site", "@esperradiators");
-    updateMeta('meta[name="twitter:creator"]', "name", "twitter:creator", "@esperradiators");
-
-    updateLink("canonical", `${BASE_URL}${url}`);
-
-    let schema = document.getElementById(
-      "organization-schema"
-    ) as HTMLScriptElement | null;
-
-    if (!schema) {
-      schema = document.createElement("script");
-      schema.type = "application/ld+json";
-      schema.id = "organization-schema";
-      document.head.appendChild(schema);
-    }
-
-    schema.text = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      name: SITE_NAME,
-      url: BASE_URL,
-      logo: `${BASE_URL}/logo.png`,
-      image: `${BASE_URL}${image}`,
-      description,
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "IN",
-        addressRegion: "Maharashtra",
-      },
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "customer service",
-        telephone: "+91 8888177775",
-        email: "Daneenheatexchangerspvtltd@gmail.com",
-        areaServed: ["IN", "Global"],
-        availableLanguage: ["English"],
-      },
-      sameAs: [
-        "https://www.facebook.com/esperradiators",
-        "https://www.linkedin.com/company/esperradiators",
-        "https://twitter.com/esperradiator"
-      ],
-      manufacturer: {
-        "@type": "Organization",
-        name: "Daneen Heat Exchangers Pvt. Ltd.",
-      },
+    const breadcrumbSchema = breadcrumbs?.length
+      ? [{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: breadcrumbs.map((item, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: item.name,
+            item: absoluteUrl(item.path),
+          })),
+        }]
+      : [];
+    const schemas = [...baseSchemas(), ...breadcrumbSchema, ...structuredData];
+    document.querySelectorAll("script[data-seo-schema]").forEach((element) => element.remove());
+    schemas.forEach((schema, index) => {
+      const element = document.createElement("script");
+      element.type = "application/ld+json";
+      element.dataset.seoSchema = String(index);
+      element.text = JSON.stringify(schema);
+      document.head.appendChild(element);
     });
-  }, [
-    title,
-    description,
-    keywords,
-    image,
-    url,
-    robots,
-    type,
-  ]);
+  }, [breadcrumbs, description, image, keywords, robots, structuredData, title, type, url]);
 
   return null;
 };

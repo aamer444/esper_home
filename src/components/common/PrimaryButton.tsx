@@ -9,6 +9,7 @@ interface ButtonProps {
   to?: string;
   href?: string;
   type?: "button" | "submit";
+  disabled?: boolean;
   className?: string;
   showArrow?: boolean;
 }
@@ -34,6 +35,7 @@ const Button = ({
   to,
   href,
   type = "button",
+  disabled = false,
   className = "",
   showArrow = true,
 }: ButtonProps) => {
@@ -75,7 +77,7 @@ const Button = ({
     </>
   );
 
-  const classes = `${base} ${variantStyles[variant]} ${className}`;
+  const classes = `${base} ${variantStyles[variant]} ${disabled ? "cursor-not-allowed opacity-45 hover:translate-y-0 hover:shadow-lg" : ""} ${className}`;
 
   if (to) {
     return (
@@ -102,6 +104,7 @@ const Button = ({
     <button
       type={type}
       onClick={onClick}
+      disabled={disabled}
       className={classes}
     >
       {content}

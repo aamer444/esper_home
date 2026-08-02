@@ -5,6 +5,7 @@ import ScrollToTop from "../components/common/ScrollToTop";
 
 const Home = lazy(() => import("../pages/Home"));
 const Products = lazy(() => import("../pages/Products"));
+const ProductDetail = lazy(() => import("../pages/ProductDetail"));
 const Services = lazy(() => import("../pages/Services"));
 const About = lazy(() => import("../pages/About"));
 const Clients = lazy(() => import("../pages/Clients"));
@@ -25,6 +26,7 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/products/:slug" element={<ProductDetail />} />
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
         <Route path="/clients" element={<Clients />} />

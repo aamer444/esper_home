@@ -37,7 +37,7 @@ const Contact = () => {
                   <div>
                     <h3 className="text-xs font-bold uppercase text-esper-navy sm:text-sm">Phone</h3>
                     <a
-                      href="tel:+919876543210"
+                      href="tel:+918888177775"
                       className="mt-1 block text-xs text-gray-600 transition hover:text-esper-blue sm:text-sm"
                     >
                       +91 8888177775
@@ -130,10 +130,10 @@ const Contact = () => {
             <ScrollReveal delay={150} className="lg:col-span-3">
               <div className="rounded-xl border border-gray-100 bg-esper-gray p-4 sm:p-6">
                 <h2 className="text-xl font-black uppercase text-esper-navy sm:text-2xl">
-                  Send an Inquiry
+                  Online Inquiry Form
                 </h2>
                 <p className="mt-2 text-sm text-gray-600 sm:text-base">
-                  Fill out the form below and our team will respond promptly.
+                  Online submissions are temporarily unavailable. Please call or email our team for product and service assistance.
                 </p>
                 <div className="mt-5 sm:mt-6">
                   <ContactForm />

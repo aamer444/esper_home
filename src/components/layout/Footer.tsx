@@ -57,6 +57,10 @@ const Footer = () => {
             <img
               src="/images/made_in_india.png"
               alt="Made in India"
+              loading="lazy"
+              decoding="async"
+              width={600}
+              height={400}
               className="
                 w-full
                 h-auto

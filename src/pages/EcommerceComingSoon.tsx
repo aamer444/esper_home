@@ -1,10 +1,12 @@
 import { ShoppingCart, Zap, Cpu, Users } from "lucide-react";
+import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import Layout from "../components/layout/Layout";
 import Container from "../components/common/Container";
 import ScrollReveal from "../components/common/ScrollReveal";
+import SEO from "../components/common/SEO";
 
-const Feature = ({ icon, title, text }: { icon: any; title: string; text: string }) => (
+const Feature = ({ icon, title, text }: { icon: ReactNode; title: string; text: string }) => (
   <div className="rounded-lg border border-gray-100 bg-white p-4">
     <div className="flex items-start gap-3">
       <div className="rounded-md bg-esper-blue/10 p-2 text-esper-blue">
@@ -21,6 +23,7 @@ const Feature = ({ icon, title, text }: { icon: any; title: string; text: string
 const EcommerceComingSoon = () => {
   return (
     <Layout>
+      <SEO title="Online Store Coming Soon" url="/ecommerce-coming-soon" robots="noindex,follow" />
       <section className="pt-[96px] pb-10">
         <Container>
           <div className="mx-auto max-w-3xl text-center">

@@ -77,6 +77,9 @@ const About = () => {
                   src={images.about.manufacturing}
                   alt="Esper manufacturing"
                   loading="lazy"
+                  decoding="async"
+                  width={1200}
+                  height={900}
                   className="h-full w-full object-cover"
                 />
               </div>

@@ -27,6 +27,8 @@ const SmartImage = ({
       {...props}
       src={currentSrc}
       alt={alt ?? ""}
+      decoding="async"
+      loading={props.loading ?? "lazy"}
       onError={handleError}
     />
   );

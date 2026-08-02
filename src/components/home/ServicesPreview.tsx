@@ -26,6 +26,9 @@ const ServicesPreview = () => {
                     src={service.image}
                     alt={service.title}
                     loading="lazy"
+                    decoding="async"
+                    width={1200}
+                    height={960}
                     className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   />
                 </div>

@@ -12,6 +12,7 @@ const NotFound = () => {
         title="Page Not Found"
         description="The page you are looking for was not found. Contact Esper for custom radiators, heat exchangers and radiator services."
         url="/404"
+        robots="noindex,follow"
       />
 
       <section className="relative overflow-hidden border-b border-gray-300 bg-[#F6F8FB]">

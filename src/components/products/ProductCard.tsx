@@ -57,7 +57,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         </div>
 
         <Link
-          to="/ecommerce-coming-soon"
+          to={`/products/${product.slug}`}
           className="mt-auto pt-4 text-[11px] font-semibold uppercase tracking-[0.12em] text-esper-blue transition hover:text-esper-navy sm:text-xs"
         >
           View Details →
